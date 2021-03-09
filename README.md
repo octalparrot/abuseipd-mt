@@ -3,7 +3,7 @@ Simple script to work abuseipdb.com with Mikrotik over SSH
 
 ## Usage
 
-Run script everyday (you have 5 api get every day)
+Add script to cron and run everyday (in free plan you have 5 api get every day)
 
 /path/to/file/abusedb.sh
 
