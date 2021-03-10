@@ -12,7 +12,7 @@ You'll also need firewall rule (in my case i have 1ip per ppp session so i add a
 
 `/ip firewall filter`
 
-`add action=drop chain=input in-interface=all-ppp log=yes log-prefix=abuseipdb src-address-list=abuseidb`
+`add action=drop chain=input in-interface=all-ppp log=yes log-prefix=abuseidb src-address-list=abuseidb`
 
 Or add to filter raw - block input and output traffic:
 
