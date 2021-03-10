@@ -10,13 +10,17 @@ My crontab entry (run at 6:00, 12:00, 18:00, 23:00):
 
 You'll also need firewall rule (in my case i have 1ip per ppp session so i add all-ppp in in-interface):  
 
-`/ip firewall filter add action=drop chain=input in-interface=all-ppp log=yes log-prefix=abuseipdb src-address-list=abuseidb`
+`/ip firewall filter
+
+add action=drop chain=input in-interface=all-ppp log=yes log-prefix=abuseipdb src-address-list=abuseidb`
 
 Or add to filter raw - block input and output traffic:
 
 `
 /ip firewall raw
+
 add action=drop chain=prerouting comment="Drop annything coming from abuseidb" log=yes log-prefix=abuseipdb-raw src-address-list=abuseidb
+
 add action=drop chain=prerouting comment="Drop annything going to abuseidb" dst-address-list=abuseidb log=yes log-prefix=abuseipdb-raw-out
 `
 
