@@ -14,11 +14,11 @@ You'll also need firewall rule (in my case i have 1ip per ppp session so i add a
 
 Or add to filter raw - block input and output traffic:
 
-`/ip firewall raw
-
+`
+/ip firewall raw
 add action=drop chain=prerouting comment="Drop annything coming from abuseidb" log=yes log-prefix=abuseipdb-raw src-address-list=abuseidb
-
-add action=drop chain=prerouting comment="Drop annything going to abuseidb" dst-address-list=abuseidb log=yes log-prefix=abuseipdb-raw-out`
+add action=drop chain=prerouting comment="Drop annything going to abuseidb" dst-address-list=abuseidb log=yes log-prefix=abuseipdb-raw-out
+`
 
 ## TODO
 - Change login from user/pass to keys
